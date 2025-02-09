@@ -13,6 +13,11 @@ export interface Recipe {
   acerbity: number;
 }
 
+export interface SectionRecipes {
+  section: Ingredient;
+  recipes: Recipe[];
+}
+
 export const recipes: Recipe[] = [
   {name: '블랙 레몬', base: coffee, main: coffee, sub: lemon, warn: 5, cool: 3, sweet: 0, acerbity: 8},
   {name: '블랙 매직', base: coffee, main: mint, sub: honey, warn: 3, cool: 5, sweet: 5, acerbity: 8},
