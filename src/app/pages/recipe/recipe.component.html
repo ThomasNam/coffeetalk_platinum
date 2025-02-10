@@ -3,7 +3,7 @@
 
     @for (section of sectionRecipes(); track section) {
       <h1>{{section.section.name}}</h1>
-      <div class="row">
+      <div class="row mb-5">
         @for (recipe of section.recipes; track recipe) {
           <div class="col-3">
             <app-recipe-one [recipe]="recipe"/>

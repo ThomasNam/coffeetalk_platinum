@@ -3,10 +3,11 @@
 
     @for (story of allStory(); track story) {
       <h1>{{story.dateStr}}</h1>
-      <div class="row">
+      <div class="row mb-5">
         @for (one of story.storyList; track one) {
-          <div class="col-3">
-            {{one.name}}
+          <div class="col-4">
+
+            <h5>{{one.name}}</h5>
             @if (one.recipe) {
               <app-recipe-one [recipe]="one.recipe"/>
             }
