@@ -104,7 +104,7 @@ export const allStory: Story[] = [
   // 하이드 : 한여름 밤의 꿈 <차 + 레몬 + 꿀>
   // 네일 : 은하수 <우유, 꿀, 민트>
   {
-    dateStr: '2020년 9월 28일 월요일', storyList: [
+    dateStr: '2020년 9월 29일 월요일', storyList: [
       {name: '갈라', recipeName: '갈라하드'},
       {name: '하이드', recipeName: '한여름 밤의 꿈'},
       {name: '네일', recipeName: '은하수'},
@@ -156,11 +156,11 @@ export const allStory: Story[] = [
   // 레이첼 : 카페라떼 <커피 + 우유 + 우유>
   // 헨드리 : 우유 <우유 + 우유 + 우유>
   {
-    dateStr: '2020년 10월 2일 금요일', storyList: [
+    dateStr: '2020년 10월 3일 금요일', storyList: [
       {name: '프레야', recipeName: '슈가앤스파이스'},
       {name: '갈라', recipeName: '갈라하드'},
       {name: '레이첼', recipeName: '카페라떼'},
-      {name: '헨드리', recipeName: '갈라하드'},
+      {name: '헨드리', recipeName: '우유'},
     ],
   },
 
