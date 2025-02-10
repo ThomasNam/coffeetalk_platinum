@@ -6,11 +6,12 @@ export interface Recipe {
   base: Ingredient;
   main: Ingredient;
   sub: Ingredient;
+  noNote?: boolean;
 
-  warn: number;
-  cool: number;
-  sweet: number;
-  acerbity: number;
+  warn?: number;
+  cool?: number;
+  sweet?: number;
+  acerbity?: number;
 }
 
 export interface SectionRecipes {
@@ -29,6 +30,9 @@ export const recipes: Recipe[] = [
   {name: '자헤 투브룩', base: coffee, main: coffee, sub: ginger, warn: 8, cool: 0, sweet: 0, acerbity: 8},
   {name: '슈가앤스파이스', base: coffee, main: honey, sub: cinnamon, warn: 5, cool: 0, sweet: 8, acerbity: 5},
 
+
+  {name: '허니커피', base: coffee, main: honey, sub: honey, noNote: true},
+
   {name: '갈라하드', base: tea, main: milk, sub: ginger, warn: 8, cool: 5, sweet: 0, acerbity: 5},
   {name: '마살라 짜이', base: tea, main: ginger, sub: cinnamon, warn: 8, cool: 3, sweet: 3, acerbity: 8},
   {name: '한여름 밤의 꿈', base: tea, main: lemon, sub: honey, warn: 5, cool: 5, sweet: 3, acerbity: 8},
@@ -41,6 +45,8 @@ export const recipes: Recipe[] = [
   {name: '마라케시', base: green, main: mint, sub: mint, warn: 3, cool: 8, sweet: 3, acerbity: 8},
   {name: '신 현미차', base: green, main: green, sub: cinnamon, warn: 5, cool: 0, sweet: 3, acerbity: 8},
   {name: '그린치', base: green, main: ginger, sub: cinnamon, warn: 5, cool: 0, sweet: 3, acerbity: 8},
+  {name: '생강 녹차', base: green, main: ginger, sub: ginger, noNote: true},
+
 
   {name: '비터하트', base: cocoa, main: ginger, sub: cinnamon, warn: 5, cool: 3, sweet: 5, acerbity: 8},
   {name: '초코비 밀크', base: cocoa, main: honey, sub: milk, warn: 0, cool: 3, sweet: 8, acerbity: 5},
@@ -54,4 +60,5 @@ export const recipes: Recipe[] = [
   {name: '은하수', base: milk, main: honey, sub: mint, warn: 3, cool: 8, sweet: 5, acerbity: 0},
   {name: 'STMJ', base: milk, main: ginger, sub: honey, warn: 5, cool: 3, sweet: 5, acerbity: 3},
   {name: '우유', base: milk, main: milk, sub: milk, warn: 3, cool: 8, sweet: 3, acerbity: 0},
+  {name: '허니밀크', base: milk, main: honey, sub: honey, noNote: true},
 ]

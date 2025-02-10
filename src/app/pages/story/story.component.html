@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <div class="accordion" id="sectionAccordion">
+
+    @for (story of allStory(); track story) {
+      <h1>{{story.dateStr}}</h1>
+      <div class="row">
+        @for (one of story.storyList; track one) {
+          <div class="col-3">
+            {{one.name}}
+            @if (one.recipe) {
+              <app-recipe-one [recipe]="one.recipe"/>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+</div>
