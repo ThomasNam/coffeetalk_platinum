@@ -1,16 +1,16 @@
 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '0'}}" value="" [(ngModel)]="tasteLv">
+  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '0'}}" value="" [(ngModel)]="tasteLv" (change)="onTasteLvChange('')">
   <label class="btn btn-outline-primary" for="{{tsType() + '0'}}">선택안함</label>
 
-  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '1'}}" value="0" [(ngModel)]="tasteLv">
+  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '1'}}" value="0" [(ngModel)]="tasteLv" (change)="onTasteLvChange('0')">
   <label class="btn btn-outline-primary" for="{{tsType() + '1'}}">{{tsName()}} 없음</label>
 
-  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '2'}}" value="3" [(ngModel)]="tasteLv">
+  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '2'}}" value="3" [(ngModel)]="tasteLv" (change)="onTasteLvChange('3')">
   <label class="btn btn-outline-primary" for="{{tsType() + '2'}}">약간 {{tsName()}}</label>
 
-  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '3'}}" value="5" [(ngModel)]="tasteLv">
+  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '3'}}" value="5" [(ngModel)]="tasteLv" (change)="onTasteLvChange('5')">
   <label class="btn btn-outline-primary" for="{{tsType() + '3'}}">{{tsName()}}</label>
 
-  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '4'}}" value="8" [(ngModel)]="tasteLv">
+  <input type="radio" class="btn-check" name="{{'rn' + tsType()}}" id="{{tsType() + '4'}}" value="8" [(ngModel)]="tasteLv" (change)="onTasteLvChange('8')">
   <label class="btn btn-outline-primary" for="{{tsType() + '4'}}">좀 더 {{tsName()}}</label>
 </div>

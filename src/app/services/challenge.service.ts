@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Recipe, recipes} from '../models/recipe';
+import {Recipe, recipes, RecipeSearch} from '../models/recipe';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class ChallengeService {
         const sweet = this.fixTsLv(r2.base.baseTs!.sweet + r2.main.mainTs.sweet + r2.sub.subTs.sweet);
         const acerbity = this.fixTsLv(r2.base.baseTs!.acerbity + r2.main.mainTs.acerbity + r2.sub.subTs.acerbity);
 
-        if (r2.warn != undefined) {
+        /*if (r2.warn != undefined) {
           if (r2.warn != warn) {
             console.log("warn", r2.name, r2.warn, warn);
           }
@@ -40,7 +40,7 @@ export class ChallengeService {
           if (r2.acerbity != acerbity) {
             console.log("acerbity", r2.name, r2.acerbity, acerbity);
           }
-        }
+        }*/
 
         r2.warn = warn;
         r2.cool = cool;
@@ -51,5 +51,38 @@ export class ChallengeService {
         return r2;
       });
     }
+  }
+
+  search(search: RecipeSearch) {
+    if (search.warn === '' && search.cool === '' && search.sweet === '' && search.acerbity === '') {
+      return [];
+    }
+    return this.calcRecipes.filter((r) => {
+      if (search.warn != '') {
+        if (r.warn !== +search.warn) {
+          return false;
+        }
+      }
+
+      if (search.cool != '') {
+        if (r.cool !== +search.cool) {
+          return false;
+        }
+      }
+
+      if (search.sweet != '') {
+        if (r.sweet !== +search.sweet) {
+          return false;
+        }
+      }
+
+      if (search.acerbity != '') {
+        if (r.acerbity !== +search.acerbity) {
+          return false;
+        }
+      }
+
+      return true;
+    });
   }
 }

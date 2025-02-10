@@ -4,9 +4,13 @@
       @for(rt of recipeType(); track  rt) {
         <div class="col-12 col-sm-6 mb-2">
           <h5>{{rt.name}}</h5>
-          <app-search-form-check [tsName]="rt.name" [tsType]="rt.key"/>
+          <app-search-form-check [tsName]="rt.name" [tsType]="rt.key" (checkVal)="onUpdateSearchVal($event)"/>
         </div>
       }
   </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary" type="button" (click)="searchWork()">검색</button>
+      </div>
+    </div>
 </div>
-
