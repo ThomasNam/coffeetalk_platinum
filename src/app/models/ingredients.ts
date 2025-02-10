@@ -50,7 +50,7 @@ export const green: Ingredient = {
     acerbity: 4,
   },
   mainTs: {
-    warn: 2,
+    warn: 1,
     cool: 0,
     sweet: 0,
     acerbity: 3,
@@ -136,16 +136,16 @@ export const ginger: Ingredient = {
   name: '생강',
   isBase: false,
   mainTs: {
-    warn: 1,
-    cool: 2,
+    warn: 3,
+    cool: 0,
     sweet: 0,
-    acerbity: 0,
+    acerbity: 3,
   },
   subTs: {
-    warn: 0,
-    cool: 1,
+    warn: 2,
+    cool: 0,
     sweet: 0,
-    acerbity: 0,
+    acerbity: 1,
   }
 };
 
