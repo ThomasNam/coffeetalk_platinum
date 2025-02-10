@@ -1,6 +1,11 @@
 import {cinnamon, cocoa, coffee, ginger, green, honey, Ingredient, lemon, milk, mint, tea} from './ingredients';
 
 
+export interface RecipeKey {
+  key: string;
+  name: string;
+}
+
 export interface Recipe {
   name: string;
   base: Ingredient;
@@ -18,6 +23,13 @@ export interface SectionRecipes {
   section: Ingredient;
   recipes: Recipe[];
 }
+
+export const recipeTypeList: RecipeKey[] = [
+  {'key': 'warn', 'name': '따뜻함',},
+  {'key': 'cool', 'name': '차가움',},
+  {'key': 'sweet', 'name': '달콤함',},
+  {'key': 'acerbity', 'name': '씀',},
+  ];
 
 export const recipes: Recipe[] = [
   {name: '블랙 레몬', base: coffee, main: coffee, sub: lemon, warn: 5, cool: 3, sweet: 0, acerbity: 8},
