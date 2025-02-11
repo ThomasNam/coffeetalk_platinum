@@ -1,4 +1,4 @@
-import {Component, input, output, signal} from '@angular/core';
+import {Component, input, output, QueryList, signal, ViewChildren} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {TasteType} from '../../../models/taste';
 
@@ -29,4 +29,10 @@ export class SearchFormCheckComponent {
 
     this.checkVal.emit({key: this.tsType(), val: value});
   }
+
+  clear() {
+    this.onTasteLvChange('');
+  }
+
+
 }

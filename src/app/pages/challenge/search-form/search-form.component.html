@@ -1,16 +1,18 @@
-<div class="card">
+<div class="card m-5">
   <div class="card-body">
-    <div class="row">
-      @for(rt of recipeType(); track  rt) {
+    <div class="row mb-4">
+      @for (rt of recipeType(); track rt) {
         <div class="col-12 col-sm-6 mb-2">
-          <h5>{{rt.name}}</h5>
+          <h5>{{ rt.name }}</h5>
           <app-search-form-check [tsName]="rt.name" [tsType]="rt.key" (checkVal)="onUpdateSearchVal($event)"/>
         </div>
       }
-  </div>
+    </div>
     <div class="row">
       <div class="col-12">
         <button class="btn btn-primary" type="button" (click)="searchWork()">검색</button>
+        &nbsp;
+        <button class="btn btn-outline-info" type="button" (click)="clear()">초기화</button>
       </div>
     </div>
-</div>
+  </div>

@@ -1,4 +1,4 @@
-import {Component, output, signal} from '@angular/core';
+import {Component, output, QueryList, signal, ViewChildren} from '@angular/core';
 import {SearchFormCheckComponent, SearchOne} from '../search-form-check/search-form-check.component';
 import {RecipeSearch, recipeTypeList} from '../../../models/recipe';
 
@@ -16,6 +16,8 @@ export class SearchFormComponent {
 
   onSearch = output<RecipeSearch>();
 
+  @ViewChildren(SearchFormCheckComponent) childSearchList!: QueryList<SearchFormCheckComponent>;
+
   private searchVal:RecipeSearch = {
     acerbity: '', cool: '', sweet: '', warn: ''
   }
@@ -27,5 +29,9 @@ export class SearchFormComponent {
 
   searchWork() {
     this.onSearch.emit(this.searchVal);
+  }
+
+  clear() {
+    this.childSearchList.forEach(child => child.clear());
   }
 }
