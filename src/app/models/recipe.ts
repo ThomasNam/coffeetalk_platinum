@@ -76,6 +76,6 @@ export const recipes: Recipe[] = [
   {name: '레모니 스니펏', base: milk, main: honey, sub: lemon, warn: 3, cool: 5, sweet: 5, acerbity: 3},
   {name: '은하수', base: milk, main: honey, sub: mint, warn: 3, cool: 8, sweet: 5, acerbity: 0},
   {name: 'STMJ', base: milk, main: ginger, sub: honey, warn: 5, cool: 3, sweet: 5, acerbity: 3},
-  {name: '우유', base: milk, main: milk, sub: milk, warn: 3, cool: 8, sweet: 3, acerbity: 0},
+  {name: '우유', base: milk, main: milk, sub: milk, warn: 3, cool: 8, sweet: 3, acerbity: 0, noNote: true},
   {name: '허니밀크', base: milk, main: honey, sub: honey, noNote: true},
 ]

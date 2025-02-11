@@ -28,7 +28,9 @@ export class RecipeComponent implements OnInit {
         section = {section: recipe.base, recipes: []};
       }
 
-      section.recipes.push(recipe);
+      if (!recipe.noNote) {
+        section.recipes.push(recipe);
+      }
     }
 
     sections.push(section!);
