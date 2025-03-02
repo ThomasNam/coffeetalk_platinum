@@ -48,6 +48,7 @@ export const recipes: Recipe[] = [
   {name: '플라워베드', base: bluetea, main: honey, sub: mint},
   {name: '갈라 티', base: bluetea, main: milk, sub: ginger},
   {name: '블루 마쉬멜로', base: bluetea, main: honey, sub: milk},
+  {name: '블루티 커스텀 1', base: bluetea, main: milk, sub: milk},
 
   {name: '갈라하드', base: tea, main: milk, sub: ginger},
   {name: '마살라 짜이', base: tea, main: ginger, sub: cinnamon},

@@ -4,6 +4,7 @@ export interface StoryOne {
   name: string;
   recipeName: string;
   recipe?: Recipe;
+  present?: string;
 }
 
 export interface Story {
