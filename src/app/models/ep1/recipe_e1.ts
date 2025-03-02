@@ -1,40 +1,5 @@
-import {cinnamon, cocoa, coffee, ginger, green, honey, Ingredient, lemon, milk, mint, tea} from './ingredients';
-import {TasteType} from './taste';
-
-
-export interface RecipeKey {
-  key: TasteType;
-  name: string;
-}
-
-export type RecipeSearch = {
-  [key in TasteType]: string;
-};
-
-export interface Recipe {
-  name: string;
-  base: Ingredient;
-  main: Ingredient;
-  sub: Ingredient;
-  noNote?: boolean;
-
-  warn?: number;
-  cool?: number;
-  sweet?: number;
-  acerbity?: number;
-}
-
-export interface SectionRecipes {
-  section: Ingredient;
-  recipes: Recipe[];
-}
-
-export const recipeTypeList: RecipeKey[] = [
-  {'key': 'warn', 'name': '따뜻함',},
-  {'key': 'cool', 'name': '차가움',},
-  {'key': 'sweet', 'name': '달콤함',},
-  {'key': 'acerbity', 'name': '씀',},
-];
+import {cinnamon, cocoa, coffee, ginger, green, honey, lemon, milk, mint, tea} from './ingredients_e1';
+import {Recipe} from '../type/recipe_type';
 
 export const recipes: Recipe[] = [
   {name: '블랙 레몬', base: coffee, main: coffee, sub: lemon, warn: 5, cool: 3, sweet: 0, acerbity: 8},

@@ -1,11 +1,13 @@
-import {Injectable, signal} from '@angular/core';
-import {Recipe, recipes} from '../models/recipe';
-import {allStory, Story} from '../models/story';
+import {Injectable} from '@angular/core';
+import {Recipe} from '../../models/type/recipe_type';
+import {Story} from '../../models/type/story_type';
+import {allStory} from '../../models/ep1/story_e1';
+import {recipes} from '../../models/ep1/recipe_e1';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StoryService {
+export class StoryEp1Service {
   getStory(): Story[] {
     const recipeMap: {[key:string]: Recipe} = {};
 

@@ -1,7 +1,7 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {StoryService} from '../../services/story.service';
-import {Story} from '../../models/story';
-import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.component';
+import {StoryEp1Service} from '../../../services/ep1/story-ep1.service';
+import {RecipeOneComponent} from '../../../components/recipe-one/recipe-one.component';
+import {Story} from '../../../models/type/story_type';
 
 @Component({
   selector: 'app-story',
@@ -13,7 +13,7 @@ import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.compone
   styleUrl: './story.component.scss'
 })
 export class StoryComponent implements OnInit {
-  storyService = inject(StoryService);
+  storyService = inject(StoryEp1Service);
   allStory = signal<Story[]>([]);
 
   ngOnInit(): void {

@@ -1,8 +1,8 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
 import {SearchFormComponent} from './search-form/search-form.component';
-import {ChallengeService} from '../../services/challenge.service';
-import {Recipe, RecipeSearch} from '../../models/recipe';
-import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.component';
+import {ChallengeEp1Service} from '../../../services/ep1/challenge-ep1.service';
+import {RecipeOneComponent} from '../../../components/recipe-one/recipe-one.component';
+import {Recipe, RecipeSearch} from '../../../models/type/recipe_type';
 
 @Component({
   selector: 'app-challenge',
@@ -12,7 +12,7 @@ import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.compone
   styleUrl: './challenge.component.scss'
 })
 export class ChallengeComponent implements OnInit {
-  challengeService = inject(ChallengeService);
+  challengeService = inject(ChallengeEp1Service);
 
   searchRecipe = signal<Recipe[]>([]);
 

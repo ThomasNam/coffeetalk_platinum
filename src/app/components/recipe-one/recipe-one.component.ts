@@ -1,6 +1,6 @@
 import {Component, computed, inject, input} from '@angular/core';
-import {Recipe} from '../../models/recipe';
 import {Md5Service} from '../../services/md5.service';
+import {Recipe} from '../../models/type/recipe_type';
 
 @Component({
   selector: 'app-recipe-one',

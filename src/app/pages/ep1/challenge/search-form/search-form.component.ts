@@ -1,6 +1,6 @@
 import {Component, output, QueryList, signal, ViewChildren} from '@angular/core';
 import {SearchFormCheckComponent, SearchOne} from '../search-form-check/search-form-check.component';
-import {RecipeSearch, recipeTypeList} from '../../../models/recipe';
+import {RecipeSearch, recipeTypeList} from '../../../../models/type/recipe_type';
 
 @Component({
   selector: 'app-search-form',

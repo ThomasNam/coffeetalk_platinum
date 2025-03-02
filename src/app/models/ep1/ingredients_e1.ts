@@ -1,4 +1,4 @@
-import {Taste} from './taste';
+import {Ingredient} from '../type/recipe_type';
 
 // 음료 이름
 // 음료 설명
@@ -9,13 +9,7 @@ import {Taste} from './taste';
 // 4~5칸 따뜻함 - 따뜻함
 // 6~8칸 따뜻함 - 좀 더 따뜻함
 
-export interface Ingredient {
-  name: string;
-  isBase: boolean,
-  baseTs?: Taste;
-  mainTs: Taste;
-  subTs: Taste;
-}
+
 
 export const coffee: Ingredient = {
   name: '커피',

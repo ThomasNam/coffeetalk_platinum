@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
-import {Recipe, recipes, RecipeSearch} from '../models/recipe';
+import {Recipe, RecipeSearch} from '../../models/type/recipe_type';
+import {recipes} from '../../models/ep1/recipe_e1';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ChallengeService {
+export class ChallengeEp1Service {
   calcRecipes: Recipe[] = [];
 
   fixTsLv(val: number) {

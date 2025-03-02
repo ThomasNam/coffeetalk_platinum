@@ -1,15 +1,4 @@
-import {Recipe} from './recipe';
-
-export interface StoryOne {
-  name: string;
-  recipeName: string;
-  recipe?: Recipe;
-}
-
-export interface Story {
-  dateStr: string;
-  storyList: StoryOne[];
-}
+import {Story} from '../type/story_type';
 
 export const allStory: Story[] = [
   // 프레야 : 에스프레소 <커피 + 커피 + 커피>

@@ -1,6 +1,6 @@
 import {Component, input, output, QueryList, signal, ViewChildren} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {TasteType} from '../../../models/taste';
+import {TasteType} from '../../../../models/type/taste';
 
 export type SearchOne = {
   key: TasteType,

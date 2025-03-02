@@ -1,7 +1,7 @@
-import {Component, computed, inject, OnInit, signal} from '@angular/core';
-import {RecipeService} from '../../services/recipe.service';
-import {SectionRecipes} from '../../models/recipe';
-import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.component';
+import {Component, inject, OnInit, signal} from '@angular/core';
+import {RecipeEp1Service} from '../../../services/ep1/recipe-ep1.service';
+import {RecipeOneComponent} from '../../../components/recipe-one/recipe-one.component';
+import {SectionRecipes} from '../../../models/type/recipe_type';
 
 @Component({
   selector: 'app-recipe',
@@ -13,7 +13,7 @@ import {RecipeOneComponent} from '../../components/recipe-one/recipe-one.compone
   styleUrl: './recipe.component.scss'
 })
 export class RecipeComponent implements OnInit {
-  recipeService = inject(RecipeService);
+  recipeService = inject(RecipeEp1Service);
   sectionRecipes = signal<SectionRecipes[]>([]);
 
   ngOnInit(): void {
