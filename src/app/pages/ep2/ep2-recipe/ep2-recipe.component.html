@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <div class="accordion" id="sectionAccordion">
+
+    @for (section of sectionRecipes(); track section) {
+      <h1>{{section.section.name}}</h1>
+      <div class="row mb-5">
+        @for (recipe of section.recipes; track recipe) {
+          <div class="col-12 col-sm-6 col-md-4 mb-2">
+            <app-recipe-one [recipe]="recipe"/>
+          </div>
+        }
+      </div>
+    }
+
+  </div>
+
+</div>
