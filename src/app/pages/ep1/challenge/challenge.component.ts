@@ -1,5 +1,5 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {SearchFormComponent} from './search-form/search-form.component';
+import {SearchFormComponent} from '../../../components/search/search-form/search-form.component';
 import {ChallengeEp1Service} from '../../../services/ep1/challenge-ep1.service';
 import {RecipeOneComponent} from '../../../components/recipe-one/recipe-one.component';
 import {Recipe, RecipeSearch} from '../../../models/type/recipe_type';
@@ -19,7 +19,6 @@ export class ChallengeComponent implements OnInit {
   ngOnInit(): void {
     this.challengeService.init();
   }
-
 
   onSearch(search: RecipeSearch) {
     this.searchRecipe.set(this.challengeService.search (search));

@@ -3,6 +3,7 @@ import {Ep2StartPageComponent} from './ep2-start-page/ep2-start-page.component';
 import {Ep2HomePageComponent} from './ep2-home-page/ep2-home-page.component';
 import {Ep2AboutComponent} from './ep2-about/ep2-about.component';
 import {Ep2RecipeComponent} from './ep2-recipe/ep2-recipe.component';
+import {Ep2ChallengeComponent} from './ep2-challenge/ep2-challenge.component';
 
 export const routes: Routes = [
   {
@@ -11,7 +12,7 @@ export const routes: Routes = [
       {path: 'about', component: Ep2AboutComponent},
       // {path: 'story', component: StoryComponent},
       {path: 'recipe', component: Ep2RecipeComponent},
-      // {path: 'challenge', component: ChallengeComponent},
+      {path: 'challenge', component: Ep2ChallengeComponent},
     ]
   },
 ];

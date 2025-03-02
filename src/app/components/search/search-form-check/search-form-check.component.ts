@@ -1,11 +1,7 @@
-import {Component, input, output, QueryList, signal, ViewChildren} from '@angular/core';
+import {Component, input, output, signal} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {TasteType} from '../../../../models/type/taste';
-
-export type SearchOne = {
-  key: TasteType,
-  val: string;
-}
+import {TasteType} from '../../../models/type/taste';
+import {SearchOne} from '../../../models/type/search_type';
 
 @Component({
   selector: 'app-search-form-check',

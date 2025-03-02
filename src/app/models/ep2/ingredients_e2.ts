@@ -38,22 +38,22 @@ export const bluetea: Ingredient = {
   name: '블루피',
   isBase: true,
   baseTs: {
-    warn: 3,
-    cool: 0,
-    sweet: 0,
-    acerbity: 4,
-  },
-  mainTs: {
     warn: 2,
-    cool: 0,
-    sweet: 0,
+    cool: 2,
+    sweet: 1,
     acerbity: 3,
   },
-  subTs: {
+  mainTs: {
     warn: 1,
-    cool: 0,
+    cool: 1,
     sweet: 0,
     acerbity: 2,
+  },
+  subTs: {
+    warn: 0,
+    cool: 0,
+    sweet: 0,
+    acerbity: 1,
   }
 };
 
@@ -61,22 +61,22 @@ export const hibiscus: Ingredient = {
   name: '히비스커스',
   isBase: true,
   baseTs: {
-    warn: 3,
-    cool: 0,
-    sweet: 0,
-    acerbity: 4,
+    warn: 0,
+    cool: 3,
+    sweet: 2,
+    acerbity: 2,
   },
   mainTs: {
-    warn: 2,
-    cool: 0,
-    sweet: 0,
-    acerbity: 3,
+    warn: 0,
+    cool: 2,
+    sweet: 1,
+    acerbity: 1,
   },
   subTs: {
-    warn: 1,
-    cool: 0,
+    warn: 0,
+    cool: 1,
     sweet: 0,
-    acerbity: 2,
+    acerbity: 0,
   }
 };
 
